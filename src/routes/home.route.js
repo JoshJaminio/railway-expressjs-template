@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
   //const session = await getSession(req)
  // const alerts = await getAlerts()
  // const [groups] = await database.execute('SELECT COUNT(*) AS GroupCount FROM `Groups`');
-  if (host == config.FrontEndSmallURL.toLowerCase()) {
+  if (host) {
       //console.log(session)
       if (session.success) {
           res.status(200).render("./Website/index.ejs", {
