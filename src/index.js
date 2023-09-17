@@ -4,6 +4,8 @@ const app = express();
 import { HomeRoute } from "./routes/home.route.js";
 app.use("/", HomeRoute);
 
+app.set('views', '/Website'); // Set the views directory
+app.set('view engine', 'ejs');  // Set the view engine to EJS
 
 app.use((req, res, next) => {
   const start = Date.now();
