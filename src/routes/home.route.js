@@ -4,7 +4,7 @@ import express from "express";
 
 // instantiate a router (miniature version of the app object, capable of doing all the same things that the app object does)
 const router = express.Router();
-import config from "../config.json";
+import * as config from "../config.json" assert { type: "json" };
 // export it with a name so you can tell them apart in the index.js file
 export { router as HomeRoute };
 
