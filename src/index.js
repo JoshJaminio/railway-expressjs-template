@@ -1,7 +1,8 @@
 import express from "express";
-const path = require("path");
+import { dirname } from 'path';
 
 const app = express();
+const __dirname = dirname(__filename);
 
 import { HomeRoute } from "./routes/home.route.js";
 app.use("/", HomeRoute);
