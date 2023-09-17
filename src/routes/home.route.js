@@ -11,7 +11,7 @@ export { router as HomeRoute };
 // it's a good idea to only set routes under a specific path for each router,
 // so it's easier to keep track of which router handles which routes
 
-router.get('/home', async (req, res) => {
+router.get('/', async (req, res) => {
   const host = req.hostname;
   const subdomain = host.split(".")[0];
   const path = req.originalUrl.split("/");
@@ -21,7 +21,7 @@ router.get('/home', async (req, res) => {
   if (host == config.FrontEndSmallURL.toLowerCase()) {
       //console.log(session)
       if (session.success) {
-          res.status(200).render("index", {
+          res.status(200).render("./Website/index.ejs", {
               name: config.name,
               baseurl: config.baseurl,
             //  session: session.data,
@@ -29,7 +29,7 @@ router.get('/home', async (req, res) => {
        // groups: groups[0]
           });
       } else {
-          res.status(200).render("index", {
+          res.status(200).render("./Website/index.ejs", {
               name: config.name,
               baseurl: config.baseurl,
             //  session: {session: false},
