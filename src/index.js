@@ -6,7 +6,6 @@ const app = express();
 import { HomeRoute } from "./routes/home.route.js";
 app.use("/", HomeRoute);
 
-app.set('views', '../Website'); // Set the views directory
 app.set('views', path.join(__dirname, '..', 'Website')); // Use the correct path
 
 app.use((req, res, next) => {
