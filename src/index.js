@@ -2,7 +2,7 @@ import express from "express";
 const app = express();
 
 import { HomeRoute } from "./routes/home.route.js";
-app.use("/", HomeRoute);
+app.use("", HomeRoute);
 
 
 app.use((req, res, next) => {
