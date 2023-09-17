@@ -11,7 +11,7 @@ export { router as HomeRoute };
 // it's a good idea to only set routes under a specific path for each router,
 // so it's easier to keep track of which router handles which routes
 
-router.get('/', async (req, res) => {
+router.get('/home', async (req, res) => {
   const host = req.hostname;
   const subdomain = host.split(".")[0];
   const path = req.originalUrl.split("/");
