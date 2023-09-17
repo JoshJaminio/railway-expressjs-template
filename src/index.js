@@ -1,11 +1,13 @@
 import express from "express";
+import path from "path";
+
 const app = express();
 
 import { HomeRoute } from "./routes/home.route.js";
 app.use("/", HomeRoute);
 
 app.set('views', '../Website'); // Set the views directory
-app.set('view engine', 'ejs');  // Set the view engine to EJS
+app.set('views', path.join(__dirname, '..', 'Website')); // Use the correct path
 
 app.use((req, res, next) => {
   const start = Date.now();
