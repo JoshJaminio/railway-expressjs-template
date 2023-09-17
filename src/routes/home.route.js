@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
  // const [groups] = await database.execute('SELECT COUNT(*) AS GroupCount FROM `Groups`');
   if (host) {
       //console.log(session)
-      if (session.success) {
+      if (host) {
           res.status(200).render("./Website/index.ejs", {
               name: config.name,
               baseurl: config.baseurl,
