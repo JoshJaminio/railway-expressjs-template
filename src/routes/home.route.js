@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
   if (host) {
       //console.log(session)
       if (host) {
-          res.status(200).render("index", {
+          res.status(200).render("index.ejs", {
               name: config.name,
               baseurl: config.baseurl,
             //  session: session.data,
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
        // groups: groups[0]
           });
       } else {
-          res.status(200).render("index", {
+          res.status(200).render("index.ejs", {
               name: config.name,
               baseurl: config.baseurl,
             //  session: {session: false},
