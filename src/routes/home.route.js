@@ -4,6 +4,7 @@ import express from "express";
 
 // instantiate a router (miniature version of the app object, capable of doing all the same things that the app object does)
 const router = express.Router();
+const config = require("../config.json")
 // export it with a name so you can tell them apart in the index.js file
 export { router as HomeRoute };
 

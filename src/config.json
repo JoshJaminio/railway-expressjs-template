@@ -1,0 +1,20 @@
+[
+    {
+        "name": "BlitzCord",
+        "FrontEndSmallURL": "blitzcord.com",
+        "baseurl": "https://blitzcord.com",
+        "apiBaseURL": "https://api.blitzcord.com",
+        "mySQL_Credentials": {
+            "ConnectionMode": "tcp",
+            "Host": "containers-us-west-113.railway.app",
+            "Username": "root",
+            "Password": "4ykGCXcx8GajSykEmFtq",
+            "Port": 6596
+        },
+        "ports": {
+            "main": "3000",
+            "api": "3001"
+        },
+        "VerificationPassword": "d54g19fh14t78jghjkkioje9r8uj89sxshybe5fd41hd84694eweuhrt32875qwgyg"
+    }
+]
